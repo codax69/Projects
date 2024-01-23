@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       <nav className=" relative flex justify-around pt-3 w-full">
-        <h1 className="text-2xl font-bold text-slate-100">Codax_Projects</h1>
+        <h1 className="text-3xl font-bold text-slate-100">Codax_Projects</h1>
         <div className=" select-none" onClick={handleClick}>
         {!Open ? <GiHamburgerMenu size={40} /> : <IoCloseSharp size={40} />}
         </div>
