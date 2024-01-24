@@ -28,6 +28,9 @@ const Navbar = () => {
           <li onClick={()=>{setOpen(!Open);router.push("/Rating")}} className="font-semibold text-lg mx-2">
           Rating
           </li>
+          <li onClick={()=>{setOpen(!Open);router.push()}} className="font-semibold text-lg mx-2">
+          Rating
+          </li>
         </ul>
       </nav>
     </>
