@@ -1,23 +1,28 @@
 const Nav = [
   {
-    url: "",
-    urlLink: "",
+    No:1 ,
+    urlLink: "/",
+    urlName: "Home",
   },
   {
-    url: "",
-    urlLink: "",
+    No: 2,
+    urlLink: "/Multi",
+    urlName: "Multi",
   },
   {
-    url: "",
-    urlLink: "",
+    No: 3,
+    urlLink: "/Rating",
+    urlName: "Rating",
   },
   {
-    url: "",
-    urlLink: "",
+    No: 4,
+    urlLink: "/ImageSlider",
+    urlName: "ImageSlider",
   },
   {
-    url: "",
-    urlLink: "",
+    No: 5,
+    urlLink: "/LoadMore",
+    urlName: "LoadMore",
   },
 ];
 export default Nav;
