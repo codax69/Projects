@@ -54,8 +54,10 @@ const ImageSidler = (props) => {
         <span className="flex absolute bottom-1 ">
           {
             Image.map((_,index)=>{
+             
               return <button key={index} className={`${ CurrentSlide === index ? 'bg-white' : "bg-slate-500" } h-2 w-2 rounded-full mx-1`} onClick={()=>setCurrentSlide(index)}></button>
             })
+            
           }
         </span>
         </div>
