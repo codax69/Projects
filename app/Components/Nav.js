@@ -24,5 +24,10 @@ const Nav = [
     urlLink: "/LoadMore",
     urlName: "LoadMore",
   },
+  {
+    No: 6,
+    urlLink : "/Qr-Code",
+    urlName : "QR Generator"
+  }
 ];
 export default Nav;

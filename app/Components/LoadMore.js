@@ -6,6 +6,7 @@ const LoadMore = () => {
   const [loading, setLoading] = useState(false);
   const [clickCount, setClickCount] = useState(1);
   const [msgError, setMsgError] = useState(null);
+  const [disable, setDisable] = useState(false)
 
   const productsUrl = `https://dummyjson.com/products?limit=${clickCount * 20}&skip=0`;
 
@@ -32,7 +33,12 @@ const LoadMore = () => {
     e.preventDefault();
     setClickCount((prevCount) => prevCount + 1);
   }, []);
-
+  useEffect(() => {
+    if(products && products.length === 100){
+      setDisable(true)
+    }
+  }, [products])
+  
   return (
     <>
     <div className="relative max-w-7xl mx-auto pt-24">
@@ -54,12 +60,13 @@ const LoadMore = () => {
         ))}
       </div>
       <div className="flex justify-center">
-      <button className="px-3 py-4 font-bold rounded-lg bg-slate-950 hover:bg-white hover:text-black" onClick={loadMoreProducts}>
+      <button disabled={disable} className="px-3 py-4 font-bold rounded-lg bg-slate-950 hover:bg-white hover:text-black" onClick={loadMoreProducts}>
         Load More
       </button>
       </div>
       {loading && <div>Loading Data...</div>}
       {msgError && <div>Error fetching products: {msgError}</div>}
+      {disable? <div>You Reach 100 Products</div> :null}
       </div>
     </>
   );
