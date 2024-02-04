@@ -28,6 +28,11 @@ const Nav = [
     No: 6,
     urlLink : "/Qr-Code",
     urlName : "QR Generator"
-  }
+  },
+  {
+    No:7 ,
+    urlLink : "/Scroll",
+    urlName : "Scroll"
+  },
 ];
 export default Nav;
